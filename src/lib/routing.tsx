@@ -8,13 +8,40 @@ type RouterContextValue = {
 
 const RouterContext = createContext<RouterContextValue | undefined>(undefined);
 
+const baseUrl = import.meta.env.BASE_URL || '/';
+const basePath = baseUrl === '/' ? '' : baseUrl.replace(/\/$/, '');
+
 const normalizePath = (path: string) => (path === '' ? '/' : path);
 
+const stripBasePath = (pathname: string) => {
+  if (!basePath) {
+    return normalizePath(pathname);
+  }
+
+  if (pathname === basePath) {
+    return '/';
+  }
+
+  if (pathname.startsWith(`${basePath}/`)) {
+    return normalizePath(pathname.slice(basePath.length));
+  }
+
+  return normalizePath(pathname);
+};
+
+const withBasePath = (to: string) => {
+  if (!basePath || to.startsWith('#')) {
+    return to;
+  }
+
+  return `${basePath}${to === '/' ? '/' : to}`;
+};
+
 export function RouterProvider({ children }: { children: React.ReactNode }) {
-  const [path, setPath] = useState(() => normalizePath(window.location.pathname));
+  const [path, setPath] = useState(() => stripBasePath(window.location.pathname));
 
   useEffect(() => {
-    const handlePopState = () => setPath(normalizePath(window.location.pathname));
+    const handlePopState = () => setPath(stripBasePath(window.location.pathname));
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
@@ -26,7 +53,7 @@ export function RouterProvider({ children }: { children: React.ReactNode }) {
       return;
     }
 
-    window.history.pushState({}, '', to);
+    window.history.pushState({}, '', withBasePath(to));
     setPath(normalizePath(to));
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
@@ -61,7 +88,7 @@ export function AppLink({ to, onClick, children, ...props }: AppLinkProps) {
 
   return (
     <a
-      href={to}
+      href={isExternal ? to : withBasePath(to)}
       onClick={(event) => {
         onClick?.(event);
         if (event.defaultPrevented || isExternal || event.metaKey || event.ctrlKey || event.shiftKey) {
