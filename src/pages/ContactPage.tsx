@@ -62,7 +62,7 @@ export function ContactPage() {
           <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-center">
             <VisualPlaceholder
               alt="Interior del centro Kabod Hair como referencia visual de ubicación"
-              src="/images/kabod/hero-salon.webp"
+              src="images/kabod/hero-salon.webp"
               objectPosition="50% 50%"
               tone="sage"
               className="min-h-[360px] rounded-[8px] shadow-salon"

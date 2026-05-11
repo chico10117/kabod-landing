@@ -16,7 +16,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-[1180px] gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
-            <img src="/images/kabod/logo.webp" alt="" className="h-12 w-12 rounded-full bg-warmWhite object-contain p-1" loading="lazy" />
+            <img src="images/kabod/logo.webp" alt="" className="h-12 w-12 rounded-full bg-warmWhite object-contain p-1" loading="lazy" />
             <p className="font-display text-4xl font-semibold">Kabod Hair</p>
           </div>
           <p className="mt-4 max-w-md text-sm leading-7 text-warmWhite/70">

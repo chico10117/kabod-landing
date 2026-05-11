@@ -48,7 +48,7 @@ export function HomePage() {
         <div className="section-inner grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <VisualPlaceholder
             alt="Detalle de coloración cálida y cabello luminoso en Kabod Hair"
-            src="/images/kabod/service-color.webp"
+            src="images/kabod/service-color.webp"
             objectPosition="50% 42%"
             tone="clay"
             className="min-h-[360px] rounded-[8px] shadow-salon"

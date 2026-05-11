@@ -23,7 +23,7 @@ export function AboutPage() {
           </div>
           <VisualPlaceholder
             alt="Equipo Kabod Hair en el salón"
-            src="/images/kabod/salon-detail-2.webp"
+            src="images/kabod/salon-detail-2.webp"
             objectPosition="50% 26%"
             tone="dark"
             className="min-h-[430px] rounded-[8px] shadow-salon"

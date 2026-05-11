@@ -29,7 +29,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-5 md:px-8">
         <AppLink to="/" className="group flex items-center gap-3" aria-label="Ir al inicio">
           <img
-            src="/images/kabod/logo.webp"
+            src="images/kabod/logo.webp"
             alt=""
             className="h-12 w-12 rounded-full border border-border bg-warmWhite object-contain p-1 shadow-sm"
             loading="eager"

@@ -31,7 +31,7 @@ export function HeroSection() {
         <div className="relative min-h-[430px] lg:min-h-[560px]">
           <VisualPlaceholder
             alt="Ambiente editorial de salón premium con transformación capilar luminosa"
-            src="/images/kabod/hero-salon.webp"
+            src="images/kabod/hero-salon.webp"
             objectPosition="50% 50%"
             tone="light"
             className="absolute inset-x-0 top-0 h-[360px] rounded-[8px] shadow-salon md:h-[520px]"

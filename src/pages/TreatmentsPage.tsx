@@ -24,7 +24,7 @@ export function TreatmentsPage() {
           </div>
           <VisualPlaceholder
             alt="Cabello liso y brillante después de un tratamiento capilar"
-            src="/images/kabod/gallery-02.webp"
+            src="images/kabod/gallery-02.webp"
             objectPosition="50% 36%"
             tone="sage"
             className="min-h-[420px] rounded-[8px] shadow-salon"
