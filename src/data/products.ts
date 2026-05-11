@@ -1,0 +1,71 @@
+import type { Product } from '../types';
+
+export const products: Product[] = [
+  {
+    id: 'nutritive-shampoo',
+    name: 'Champú Nutritivo Kabod',
+    category: 'shampoo',
+    description: 'Limpieza suave para cabello seco o apagado, pensada para uso frecuente.',
+    price: 24.9,
+    image: '/images/kabod/service-treatment.webp',
+    badge: 'Recomendado',
+    stockStatus: 'available',
+  },
+  {
+    id: 'repair-mask',
+    name: 'Mascarilla Reparadora Intensa',
+    category: 'treatment',
+    description: 'Tratamiento de apoyo para recuperar tacto, brillo y disciplina en casa.',
+    price: 32.9,
+    image: '/images/kabod/gallery-02.webp',
+    badge: 'Favorito Kabod',
+    stockStatus: 'available',
+  },
+  {
+    id: 'shine-serum',
+    name: 'Sérum Brillo y Suavidad',
+    category: 'styling',
+    description: 'Acabado ligero para controlar puntas, aportar brillo y suavizar el peinado.',
+    price: 27.5,
+    image: '/images/kabod/gallery-01.webp',
+    badge: 'Nuevo',
+    stockStatus: 'low-stock',
+  },
+  {
+    id: 'heat-protector',
+    name: 'Protector Térmico Profesional',
+    category: 'professional-care',
+    description: 'Protección antes del secador o herramienta térmica con acabado flexible.',
+    price: 21.9,
+    image: '/images/kabod/gallery-07.webp',
+    stockStatus: 'available',
+  },
+  {
+    id: 'balayage-pack',
+    name: 'Pack Mantenimiento Balayage',
+    category: 'packs',
+    description: 'Rutina seleccionada para mantener luminosidad, matiz y suavidad entre visitas.',
+    price: 59.9,
+    image: '/images/kabod/gallery-05.webp',
+    badge: 'Recomendado',
+    stockStatus: 'available',
+  },
+  {
+    id: 'leave-in',
+    name: 'Tratamiento Leave-In Hidratante',
+    category: 'treatment',
+    description: 'Cuidado sin aclarado para mejorar manejabilidad y aspecto del cabello.',
+    price: 29.9,
+    image: '/images/kabod/gallery-04.webp',
+    stockStatus: 'available',
+  },
+];
+
+export const productCategoryLabels = {
+  all: 'Todos',
+  shampoo: 'Champús',
+  treatment: 'Tratamientos',
+  styling: 'Styling',
+  'professional-care': 'Cuidado profesional',
+  packs: 'Packs',
+} as const;
